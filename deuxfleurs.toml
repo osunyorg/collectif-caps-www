@@ -19,6 +19,10 @@ from = "/personnes/index.html"
 to = "/formateurs-et-formatrices/"
 
 [[redirects]]
+from = "/personnes/equipe-editoriale/index.html"
+to = "/formateurs-et-formatrices/equipe-editoriale/"
+
+[[redirects]]
 from = "/organisations/index.html"
 to = "/organismes-de-formation/"
 
