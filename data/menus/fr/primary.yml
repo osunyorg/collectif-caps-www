@@ -47,4 +47,60 @@ items:
   - "/demarches/"
   - "/financer-ma-formation/"
   - "/foire-aux-questions/"
+- title: Le collectif CAPS
+  slug: le-collectif-caps
+  target: ''
+  kind: blank
+  new_tab: false
+  children:
+  - title: Qui sommes-nous ?
+    slug: qui-sommes-nous
+    target: "/qui-sommes-nous/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/qui-sommes-nous"
+    file: content/fr/pages/qui-sommes-nous/_index.html
+  - title: Organismes de formation
+    slug: organismes-de-formation
+    target: "/organismes-de-formation/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/organizations"
+    file: content/fr/organizations/_index.html
+  - title: Formateurs et formatrices
+    slug: formateurs-et-formatrices
+    target: "/formateurs-et-formatrices/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/persons"
+    file: content/fr/persons/_index.html
+  - title: Nous rejoindre, nous soutenir
+    slug: nous-rejoindre-nous-soutenir
+    target: "/nous-rejoindre-nous-soutenir/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/nous-rejoindre-nous-soutenir"
+    file: content/fr/pages/nous-rejoindre-nous-soutenir/_index.html
+  descendants_targets:
+  - "/formateurs-et-formatrices/"
+  - "/nous-rejoindre-nous-soutenir/"
+  - "/organismes-de-formation/"
+  - "/qui-sommes-nous/"
+- title: Ressources
+  slug: ressources
+  target: "/ressources/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/ressources"
+  file: content/fr/pages/ressources/_index.html
 
