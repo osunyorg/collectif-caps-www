@@ -1,33 +1,52 @@
 ---
 title: Menu principal
 items:
-- title: Fichiers
-  slug: fichiers
-  target: "/fichiers/"
+- title: Trouver ma formation
+  slug: trouver-ma-formation
+  target: "/trouver-ma-formation/"
   kind: page
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/files"
-  file: content/fr/files/_index.html
-- title: Actualités
-  slug: actualites
-  target: "/actualites/"
-  kind: page
+  path: "/pages/trouver-ma-formation"
+  file: content/fr/pages/trouver-ma-formation/_index.html
+- title: Organiser ma formation
+  slug: organiser-ma-formation
+  target: ''
+  kind: blank
   new_tab: false
-  children: []
-  descendants_targets: []
-  path: "/posts"
-  file: content/fr/posts/_index.html
-- title: Personnes
-  slug: personnes
-  target: "/personnes/"
-  kind: page
-  new_tab: false
-  children: []
-  descendants_targets: []
-  path: "/persons"
-  file: content/fr/persons/_index.html
+  children:
+  - title: Financer ma formation
+    slug: financer-ma-formation
+    target: "/financer-ma-formation/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/financer-ma-formation"
+    file: content/fr/pages/financer-ma-formation/_index.html
+  - title: Démarches
+    slug: demarches
+    target: "/demarches/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/demarches"
+    file: content/fr/pages/demarches/_index.html
+  - title: Foire aux questions
+    slug: foire-aux-questions
+    target: "/foire-aux-questions/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/foire-aux-questions"
+    file: content/fr/pages/foire-aux-questions/_index.html
+  descendants_targets:
+  - "/demarches/"
+  - "/financer-ma-formation/"
+  - "/foire-aux-questions/"
 - title: Organisations
   slug: organisations
   target: "/organisations/"
@@ -37,4 +56,13 @@ items:
   descendants_targets: []
   path: "/organizations"
   file: content/fr/organizations/_index.html
+- title: Personnes
+  slug: personnes
+  target: "/personnes/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/persons"
+  file: content/fr/persons/_index.html
 
