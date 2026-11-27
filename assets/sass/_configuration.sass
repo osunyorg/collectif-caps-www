@@ -1,7 +1,63 @@
-$heading-font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$color-background: #FFF8F2
+$color-text: #30231F
+$color-accent: var(--color-text)
+
+// COMPONENTS
+
+$header-background: var(--color-background)
+$header-border-bottom-width: 0
+$header-logo-height-desktop: pxToRem(52)
+$header-dropdown-full: true
+
+$hero-background-color: #F2D170
+
+$footer-background-color: none
+$footer-logo-height-desktop: pxToRem(52)
+
+// TYPOGRAPHY
+
+$heading-font-family: Sora
 $body-font-family: $heading-font-family
 
-$header-background: none
-$header-border-bottom-width: 0
-$hero-background-color: none
-$footer-background-color: none
+$h1-size-desktop: pxToRem(72)
+$h2-size-desktop: pxToRem(48)
+$h2-weight: 400
+$h3-size-desktop: pxToRem(40)
+$h3-weight: 400
+$h4-size-desktop: pxToRem(32)
+$h4-weight: 400
+$h4-size-desktop: pxToRem(32)
+$h4-weight: 400
+$h5-letter-spacing: 0.4
+$body-size-desktop: pxToRem(20)
+
+// buttons
+$btn-font-family: $body-font-family
+$btn-font-size-desktop: $body-size-desktop
+$btn-line-height: 130%
+$btn-background: transparent
+$btn-hover-background: $btn-background
+$btn-border-width: 4px
+$btn-border: $btn-border-width dotted currentColor
+$btn-hover-border: $btn-border-width solid currentColor
+$btn-border-radius: pxToRem(48)
+$btn-padding-desktop: pxToRem(24) pxToRem(32)
+$btn-min-width: unset
+$btn-min-width-desktop: $btn-min-width
+
+// BLOCKS
+
+// call to action
+$block-call-to-action-button-background: $btn-background
+$block-call-to-action-button-border: $btn-border
+$block-call-to-action-button-color: currentColor
+$block-call-to-action-button-hover-background: $btn-hover-background
+$block-call-to-action-button-hover-border: $btn-hover-border
+$block-call-to-action-button-hover-color: $block-call-to-action-button-color
+
+$block-call-to-action-accent-button-background: $btn-background
+$block-call-to-action-accent-button-border: $btn-border
+$block-call-to-action-accent-button-color: inherit
+$block-call-to-action-accent-button-hover-background: $btn-hover-background
+$block-call-to-action-accent-button-hover-border: $btn-hover-border
+$block-call-to-action-accent-button-hover-color: $block-call-to-action-button-color
