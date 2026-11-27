@@ -1,8 +1,55 @@
 .block-call_to_action
+    .top
+        .block-title
+            color: $color-yellow
+
+    .call_to_action
+        .block-title
+            @include h2
+            margin-bottom: $spacing-3
+        .description
+            p
+                @include body-text
+                + p
+                    margin-top: $spacing-3
+        .actions
+            align-items: flex-start
+            display: flex
+            flex-direction: column
+            a + a
+                @include icon(arrow-right-line, after)
+                @include hover-translate-icon
+                font-weight: bold
+                text-decoration: none
+                &::after
+                    font-size: pxToRem(32)
+                    vertical-align: middle
+                    margin-left: $spacing-1
+
+    + .block-call_to_action--accent_background
+        margin-top: 0
+
+    &.block-class-cta-pink,
+    &.block-class-cta-blue,
+    &.block-call_to_action--no_background
+        --cta-color: var(--color-text)
+        .block-title
+            color: inherit
+
+    &.block-class-cta-pink 
+        --cta-background-color: #{$color-pink}
+
+    &.block-class-cta-blue
+        --cta-background-color: #{$color-blue}
+        
     @include in-page-without-sidebar
-        .call_to_action
-            .block-title
-                @include h2
-            .description
-                p
-                    @include body-text
+        .block-title
+            @include h2
+        &.block-class-image-left
+            .call_to_action
+                align-items: center
+                > figure
+                    grid-row: 1
+                    grid-column: 1/5
+                > div
+                    grid-column: 6/13
