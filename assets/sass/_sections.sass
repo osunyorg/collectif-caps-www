@@ -1,7 +1,99 @@
 .page__home
+    .block-posts
+        background: $color-yellow
+        margin-top: 0
+        padding-top: $spacing-6
+        padding-bottom: $spacing-5
+        .block-title
+            @include h2
+            a::after
+                font-size: 0.8em
+                margin-left: $spacing-1
+
+    .block-programs
+        background: $color-blue
+        margin-top: 0 !important
+        margin-bottom: 0
+        .block-title
+            text-transform: uppercase
+        &:first-child
+            padding-top: $spacing-6
+        + .block-programs
+            padding-top: var(--block-space-y)
+            padding-bottom: $spacing-6
+
+        &--grid
+            .programs-grid
+                @include grid(4, desktop)
+            .program
+                border: 6px solid transparent
+                background: var(--color-background)
+                padding: space(8)
+                transition: 0.3s ease border-color
+                .program-title
+                    @include h5
+                    font-weight: 400
+                    margin-bottom: space(10)
+                .more
+                    font-size: 0
+                    &::after
+                        font-size: pxToRem(64)
+                        position: relative
+                        border-radius: 100%
+                        color: $color-tropical
+                        background: var(--color-text)
+                    &::before
+                        position: absolute
+                        content: ''
+                        height: pxToRem(64)
+                        width: pxToRem(64)
+                        background-image: url('/assets/images/rounded-dots.svg')
+                        transform: translate(25%, -25%)
+                &:hover
+                    border-color: $color-tropical
+                    .program-title
+                        text-decoration: underline
+                        text-decoration-thickness: 2px
+                        text-underline-offset: 2px
+                    .more::after
+                        background: $color-blue
+                        color: var(--color-text)
+                        transform: rotate(-25deg)
+
+        &--list
+            .programs
+                > li + li
+                    border-top: 4px dotted var(--color-text)
+                .program
+                    .program-title a
+                        @include h4
+
     @include media-breakpoint-up(desktop)
         .hero
             .hero-text
                 width: offset(6)
             figure
                 width: columns(5)
+
+// posts
+.posts
+    &--list
+        .post-title
+            @include h5
+            font-weight: normal
+        > li
+            @include icon(arrow-right-line, after)
+            align-items: center
+            display: flex
+            position: relative
+            article
+                width: 100%
+            &:where(:not(:last-child))
+                border-bottom: 4px dotted var(--color-text)
+            &::after
+                font-size: pxToRem(32)
+                position: absolute
+                right: 0
+                transition: transform 0.3s ease
+            &:hover::after
+                transform: rotate(-25deg)

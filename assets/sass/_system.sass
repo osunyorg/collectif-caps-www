@@ -3,6 +3,16 @@ header#document-header
     html.has-menu-opened &
         .dropdown-menu
             border-top: 1px solid alphaColor(var(--color-text), 0.3)
+    
+    .nav-level-1
+        span[aria-expanded="true"]
+            text-decoration: underline
+            text-decoration-thickness: 2px
+            text-underline-offset: 2px
+            + .dropdown-menu
+                padding: $spacing-3 0
+                a
+                    @include h5
 
 // footer
 footer#document-footer
