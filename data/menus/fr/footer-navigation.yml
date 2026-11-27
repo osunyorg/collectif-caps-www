@@ -22,6 +22,15 @@ items:
   new_tab: false
   children: []
   descendants_targets: []
+- title: Ressources
+  slug: ressources
+  target: "/actualites/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/posts"
+  file: content/fr/posts/_index.html
 - title: FAQ
   slug: faq
   target: "/foire-aux-questions/"
