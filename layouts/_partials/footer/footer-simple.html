@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="footer-logo">
+    {{ partial "footer/logo.html" }}
+  </div>
+</div>
+<div class="container">
+  <div class="footer-about">
+    <p>{{ i18n "commons.footer.text" }}</p>
+    {{ $menu_extranet := partial "GetMenu" "footer-extranet" }}
+    {{ if $menu_extranet }}
+      {{ partial "commons/menu.html" (dict
+          "kind" "footer-extranet"
+          "level" 1
+          "context" .
+          "class" "footer-extranet"
+        )}}
+    {{ end }}
+    <img src="/assets/images/logo-feder.png" alt="{{ i18n "commons.footer.logo"}}">
+  </div>
+  <div class="footer-menu">
+    <div class="footer-support">
+      {{ $menu_support := partial "GetMenu" "support" }}
+      {{ if $menu_support }}
+        {{ partial "commons/menu.html" (dict
+            "kind" "support"
+            "level" 1
+            "context" .
+          )}}
+      {{ end }}
+      {{ if and site.Params.search.active (in site.Params.search.positions "footer") }}
+        <div class="footer-search">
+          {{ partial "commons/search/button.html" "footer" }}
+        </div>
+      {{ end }}
+    </div>
+    {{ $menu_navigation := partial "GetMenu" "footer-navigation" }}
+    {{ if $menu_navigation }}
+      {{ partial "commons/menu.html" (dict
+          "kind" "footer-navigation"
+          "level" 1
+          "context" .
+          "class" "footer-navigation"
+        )}}
+    {{ end }}
+
+  </div>
+</div>
+<div class="container">
+  {{ partial "footer/credit.html" . }}
+  <div class="footer-legals">
+    {{ partial "footer/legals.html" . }}
+  </div>
+</div>

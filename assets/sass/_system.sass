@@ -3,3 +3,48 @@ header#document-header
     html.has-menu-opened &
         .dropdown-menu
             border-top: 1px solid alphaColor(var(--color-text), 0.3)
+
+// footer
+footer#document-footer
+    padding-bottom: 0
+    &::after
+        background-image: url('/assets/images/footer-dot.svg')
+        content: ''
+        display: block
+        height: space(24)
+        margin-top: var(--grid-gutter)
+        width: 100%
+    .footer-about
+        > * + *
+            margin-top: var(--grid-gutter)
+    .footer-extranet,
+    .footer-support,
+    .footer-search button,
+    .footer-navigation
+        @include small
+    
+    @include media-breakpoint-down(desktop)
+        .footer-menu
+            > * + *,
+            .footer-search
+                margin-top: var(--grid-gutter)
+
+    @include media-breakpoint-up(desktop)
+        .container
+            gap: var(--grid-gutter)
+            &:nth-child(2)
+                align-items: baseline
+                gap: space(47)
+                > * 
+                    flex: 1
+        .footer-menu
+            @include grid(2)
+        .footer-support
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        .footer-legals
+            > ul
+                align-items: baseline
+                display: flex
+                gap: space(8)
