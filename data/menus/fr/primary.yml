@@ -94,13 +94,4 @@ items:
   - "/nous-rejoindre-nous-soutenir/"
   - "/organismes-de-formation/"
   - "/qui-sommes-nous/"
-- title: Ressources
-  slug: ressources
-  target: "/ressources/"
-  kind: page
-  new_tab: false
-  children: []
-  descendants_targets: []
-  path: "/pages/ressources"
-  file: content/fr/pages/ressources/_index.html
 
