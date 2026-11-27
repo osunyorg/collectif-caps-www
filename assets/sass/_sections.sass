@@ -33,9 +33,9 @@
                 .program-title
                     @include h5
                     font-weight: 400
-                    margin-bottom: space(10)
                 .more
                     font-size: 0
+                    margin-top: space(10)
                     &::after
                         font-size: pxToRem(64)
                         position: relative
@@ -43,12 +43,7 @@
                         color: $color-tropical
                         background: var(--color-text)
                     &::before
-                        position: absolute
-                        content: ''
-                        height: pxToRem(64)
-                        width: pxToRem(64)
-                        background-image: url('/assets/images/rounded-dots.svg')
-                        transform: translate(25%, -25%)
+                        @include dots-circle
                 &:hover
                     border-color: $color-tropical
                     .program-title
@@ -59,14 +54,6 @@
                         background: $color-blue
                         color: var(--color-text)
                         transform: rotate(-25deg)
-
-        &--list
-            .programs
-                > li + li
-                    border-top: 4px dotted var(--color-text)
-                .program
-                    .program-title a
-                        @include h4
 
     @include media-breakpoint-up(desktop)
         .hero
@@ -97,3 +84,58 @@
                 transition: transform 0.3s ease
             &:hover::after
                 transform: rotate(-25deg)
+
+// programs
+.block-programs--list .programs,
+.programs--list
+    > li + li
+        border-top: 4px dotted var(--color-text)
+    .program
+        .program-title
+            @include icon(arrow-right-line, after)
+            position: relative
+            display: flex
+            justify-content: space-between
+            a
+                @include h4
+                &::after
+                    content: none !important
+            &::before,
+            &::after
+                opacity: 0
+                transition: all 0.3s ease
+            &::after
+                font-size: pxToRem(64)
+                position: relative
+                border-radius: 100%
+                color: var(--color-text)
+                background: $color-blue
+            &::before
+                @include dots-circle
+                right: 0
+        .program-categories a
+            text-decoration: none
+            &:hover
+                @include link
+        &:hover
+            .program-title 
+                a
+                    text-decoration: underline
+                &::before,
+                &::after
+                    opacity: 1
+                &::after
+                    transform: rotate(-25deg)
+
+// taxonomies
+.taxonomies-list 
+    .dropdown 
+        .taxonomy-categories
+            > ul 
+                > li 
+                    ul
+                        border-top: 2px dotted var(--color-text)
+            .extendable-button
+                text-transform: uppercase
+            a::after
+                margin-left: $spacing-1
